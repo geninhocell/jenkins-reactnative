@@ -4,4 +4,5 @@ COPY . /app
 
 WORKDIR /app
 
-RUN yarn && yarn android
+RUN yarn && yarn android && cd android && ./gradlew assembleRelease && cd -
+
